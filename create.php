@@ -15,6 +15,14 @@ $password = $_POST['password'];
 
 
 $sql ="INSERT INTO student(name, email, date , password)VALUES ('$name', '$email','$date', '$password')";
+$result = mysqli_query($conn, $sql);
+
+    if($result){
+        echo " Data Submitted Successfully";
+    }else{
+        echo " Error Submitting Data";
+    }
+
 
 
 
